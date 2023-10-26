@@ -25,7 +25,7 @@ returnMovies(APILINK)
                 div_column.setAttribute('class', 'column');
 
                 const div_row = document.createElement('div');
-                div_card.setAttribute('class', 'card');
+                div_row.setAttribute('class', 'row');
 
                 title.innerHTML = `${element.title}`;
                 image.src = IMG_PATH + element.poster_path;
@@ -44,7 +44,7 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     main.innerHTML = '';
     
-    const searchItem = search.ariaValueMax;
+    const searchItem = search.value;
 
     if (searchItem) {
         returnMovies(SEARCHAPI + searchItem);
